@@ -18,4 +18,5 @@ export const path = {
   },
   appFolder: srcFolder,
   distFolder: distFolder,
+  clean: distFolder,
 }
