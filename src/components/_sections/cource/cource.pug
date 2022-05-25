@@ -1,0 +1,49 @@
+include ../../_ui/button/b.pug 
+include ../../_ui/heading/h.pug 
+include ../../_ui/paragraph/p.pug 
+include ../../_ui/svg/svg.pug 
+
+- 
+  var courceList = [
+    {
+      imgLink: 'assets/img/cource/c-1.jpg', 
+      titleInner: 'Cinema 4d для начинающих', 
+      hours: '60',
+      descInner: 'Учитывая ключевые сценарии поведения, базовый вектор развития напрямую зависит от системы массового участия. Следует отметить, что сложившаяся структура организации напрямую зависит от стандартных подходов.'
+    }, 
+    {
+      imgLink: 'assets/img/cource/c-2.jpg', 
+      titleInner: 'Blender: продвинутый уровень', 
+      hours: '40',
+      descInner: 'Но убеждённость некоторых оппонентов в значительной степени обусловливает важность форм воздействия. Внезапно, тщательные исследования конкурентов представлены.'
+    }, 
+    {
+      imgLink: 'assets/img/cource/c-3.jpg', 
+      titleInner: 'Визуализация в 3ds Max', 
+      hours: '40',
+      descInner: 'Повседневная практика показывает, что сложившаяся структура организации обеспечивает актуальность кластеризации усилий.'
+    }, 
+    {
+      imgLink: 'assets/img/cource/c-4.jpg', 
+      titleInner: 'Скульптинг в ZBrush', 
+      hours: '80',
+      descInner: 'Разнообразный и богатый опыт говорит нам, что граница обучения кадров требует определения и уточнения прогресса профессионального сообщества! В частности, постоянный количественный рост и сфера нашей активности.'
+    }, 
+  ]
+
+section(class="cource")
+  div(class="container cource__container")
+    div(class="layout cource__layout")
+      +h( 2, 'cource__h', 'Курсы' )
+      ul(class="list-reset cource__list")
+        each item in courceList 
+          li(class="cource__item item-cource")
+            div(class="item-cource__img-wrap")
+              img(class="item-cource__img" src=item.imgLink alt="Скриншот курса")
+              div(class="item-cource__time-wrap")
+                +svg( 'clock', 'item-cource__icon', '' )
+                +l( 'l--2 item-cource__l', `${item.hours} часов` )
+            div(class="item-cource__body")
+              +h( 3, 'item-cource__h', item.titleInner )
+              +p( 'item-cource__p', item.descInner )
+              +b( 'b--2 item-cource__b', 'Подробнее' )

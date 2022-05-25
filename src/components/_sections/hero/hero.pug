@@ -1,0 +1,10 @@
+include ../../_ui/heading/h.pug 
+include ../../_ui/paragraph/p.pug 
+include ../../_ui/button/b.pug 
+
+section(class="hero")
+  div(class="container hero__container")
+    div(class="layout hero__layout")
+      +h( 1, 'hero__h', 'Курсы 3D моделирования')
+      +p( 'hero__p', 'Следует отметить, что существующая теория способствует повышению качества благоприятных перспектив. Не следует, однако, забывать.' )
+      +b( 'b--1 hero__b', 'Выбрать курс' )

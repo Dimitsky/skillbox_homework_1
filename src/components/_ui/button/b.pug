@@ -1,0 +1,5 @@
+//- button
+
+mixin b( mod, inner )
+  - var m = mod || '';
+  button(class=`b ${m}`, type="button")=inner 

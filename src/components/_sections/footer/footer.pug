@@ -1,0 +1,37 @@
+include ../../_ui/heading/h.pug 
+include ../../_ui/label/l.pug 
+include ../../_ui/svg/svg.pug 
+
+- 
+  var socialList = [
+    {
+      href: '#', 
+      iconId: 'fb',
+    }, 
+    {
+      href: '#', 
+      iconId: 'twitter',
+    }, 
+    {
+      href: '#', 
+      iconId: 'instagram',
+    }, 
+    {
+      href: '#', 
+      iconId: 'youtube',
+    }, 
+  ]
+
+footer(class="footer")
+  div(class="footer__top top-footer")
+    div(class="container top-footer__container")
+      div(class="layout top-footer__layout")
+        ul(class="list-reset top-footer__list")
+          each item in socialList 
+            li(class="top-footer__item item-top-footer")
+              a(class="item-top-footer__a", href=item.href)
+                +svg( item.iconId, 'item-top-footer__icon', '' )
+  div(class="footer__bottom bottom-footer")
+    div(class="container bottom-footer__container")
+      div(class="layout bottom-footer__layout")
+        span(class="l l--3 bottom-footer__copy") SKILLBOX <a class="bottom-footer__copy-link" href="#">&reg;</a> 2021

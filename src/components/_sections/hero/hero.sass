@@ -1,0 +1,69 @@
+// hero 
+
+.hero
+
+  &__container
+    background: rgb(85,86,129) radial-gradient(circle at 59% 80%, rgb(85, 86, 129) 0%, rgb(46, 43, 68) 40%)
+
+  &__layout
+    padding: 50px 0
+
+  &__h, &__p
+    color: #fff
+    color: var( --color-light )
+
+  &__h 
+    margin-bottom: 4px
+
+  &__p
+    margin-bottom: 45px
+    line-height: 1.3
+
+@media screen and ( min-width: 576px )
+  .hero
+
+    &__container
+      background: radial-gradient(circle at 62% 80%, rgb(85, 86, 129) 0%, rgb(46, 43, 68) 60%)
+
+    &__layout
+      padding: 77px 0 135px
+
+    &__h
+      max-width: 390px
+      margin-bottom: 15px
+
+    &__p
+      max-width: 345px
+      margin-bottom: 63px
+      font-size: 1.125rem
+      line-height: inherit
+
+    &__b
+      min-width: 270px
+      padding: 1.34em 0
+      font-size: 1.125rem
+
+@media screen and ( min-width: 768px )
+  .hero
+
+    &__container
+      background: url(../img/hero/bg@2x.png) no-repeat right 40px top 43%/43%, radial-gradient(circle at 70% 50%, rgb(85, 86, 129) 0%, rgb(46, 43, 68) 50%)
+      
+    &__layout
+      padding-top: 130px
+
+@media screen and ( min-width: 1440px )
+  .hero
+
+    &__container
+          background: url(../img/hero/bg-2@2x.png) no-repeat right 174px top 50%/43%, radial-gradient(circle at 70% 50%, rgb(85, 86, 129) 0%, rgb(46, 43, 68) 50%)
+          
+    &__layout
+      padding: 130px 0 130px
+
+    &__h
+      margin-bottom: 25px
+
+    &__p
+      max-width: 444px
+      margin-bottom: 65px

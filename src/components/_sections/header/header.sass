@@ -1,0 +1,143 @@
+.header
+  
+  &__container
+    background: #3F2AFF
+    background: var( --color-royal )
+
+  &__layout
+    min-height: 80px
+
+  &__logo-link
+    display: block
+
+  &__logo-pic
+    display: block
+    height: 16px
+    width: 72px
+
+.js .header__layout
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.hamburger
+  display: none
+
+  &__pic-open, &__pic-close
+    height: 30px
+    width: 30px
+
+  &__pic-open
+    display: block
+
+  &__pic-close
+    display: none
+
+.hamburger[aria-expanded="true"] .hamburger__pic-open
+  display: none
+.hamburger[aria-expanded="true"] .hamburger__pic-close
+  display: block
+
+.js .hamburger 
+  z-index: 1000
+  display: block
+  order: 1
+
+.js .close
+  display: block
+
+.nav
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    min-height: 433px
+    padding: 76px 15px
+    background: #2F2C45
+    background: var( --color-mobile-menu-dark )
+
+  &__item:not(:last-child)
+    margin-bottom: 56px
+
+  &__link
+    color: #fff
+    color: var( --color-light )
+    font-size: 1.125rem
+    line-height: 1.172
+    text-decoration: none
+
+.js .nav__wrap 
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  transform: translateY(-100%)
+  visibility: hidden
+
+.js .nav__wrap.open
+  transform: translateY(0)
+  visibility: visible
+
+@media screen and ( min-width: 576px )
+  .js .hamburger
+    display: none
+
+  .header
+    
+    .js &__layout
+      align-items: center
+      align-items: stretch
+      flex-direction: column
+      justify-content: space-between
+      padding: 30px 0
+      min-height: 133px
+
+    &__logo-link
+      flex-basis: 100%
+      display: flex
+      justify-content: center
+
+    &__logo-pic
+      height: 21px
+      width: 94px
+
+  .nav
+
+    .js &__wrap
+      position: static
+      display: block
+      min-height: unset
+      padding: 0 20px
+      background: none
+      transform: none
+      visibility: visible
+
+    &__list
+      display: flex
+      justify-content: space-between
+
+    &__item:not(:last-child)
+      margin-right: 20px
+      margin-bottom: 0
+
+@media screen and ( min-width: 768px )
+  .js .header__layout
+    flex-direction: row
+    min-height: 80px
+    padding: 28px 0
+
+  .header
+    
+    &__logo-link 
+      flex-basis: unset
+      margin-right: 56px
+
+  .nav
+
+    .js &__wrap
+      padding: 0
+    
+    &__list 
+      flex-wrap: wrap
+      min-width: 470px

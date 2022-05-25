@@ -1,0 +1,7 @@
+//-
+
+mixin svg(id, mod, viewBox)
+  - mod = mod || '';
+  - vb = viewBox || false;
+  svg(class=`svg ${mod}`, aria-hidden="true", viewBox=vb)
+    use(href=`assets/img/defs.svg#${id}`)

@@ -1,0 +1,23 @@
+include ../../_ui/heading/h.pug 
+include ../../_ui/paragraph/p.pug 
+include ../../_ui/svg/svg.pug 
+include ../../_ui/label/l.pug 
+
+section(class="preference")
+  div(class="container preference__container")
+    div(class="layout preference__layout")
+      div(class="preference__top top-preference")
+        img(class="top-preference__img", srcset="assets/img/preference/i-1@1x.png 1x, assets/img/preference/i-1@2x.png 2x", alt="стопка железных труб")
+        div(class="top-preference__wrap")
+          +h( 2, 'top-preference__h', 'Преимущества обучения в skillbox' )
+          +p( 'top-preference__p', 'Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют собой яркий пример континентально- европейского типа политической культуры, будут рассмотрены исключительно в разрезе маркетинговых предпосылок.' )
+      ul(class="list-reset preference__bottom bottom-preference")
+        li(class="bottom-preference__item")
+          +svg( 'eye', 'bottom-preference__icon', '0 0 80 80' )
+          +l( 'l--1 bottom-preference__l', 'Результат вашего обучения является самым важным для нас приоритетом' )
+        li(class="bottom-preference__item")
+          +svg( 'fingers', 'bottom-preference__icon', '0 0 80 80' )
+          +l( 'l--1 bottom-preference__l', 'Лично познакомитесь с одним из своих будущих преподавателей' )
+        li(class="bottom-preference__item")
+          +svg( 'horn', 'bottom-preference__icon', '0 0 80 80' )
+          +l( 'l--1 bottom-preference__l', 'Значимость этих проблем очевидна, поэтому стоит всегда быть внимательным' )

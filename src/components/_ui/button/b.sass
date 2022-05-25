@@ -1,0 +1,40 @@
+.b 
+  border: none
+  border-radius: 20px
+  padding: 1.3em 0
+  color: #fff
+  color: var( --color-light )
+  font-size: 1rem
+  font-weight: 700
+  line-height: 1.172
+  text-align: center
+  background: #3F2AFF
+  background: var( --color-royal )
+
+  &--1
+    min-width: 213px
+    
+  &--2
+    min-width: 195px
+
+@media screen and ( min-width: 576px )
+  .b 
+
+    &--2
+      min-width: 180px  
+
+@media screen and ( min-width: 768px )
+  .b
+
+    &--2
+      min-width: 195px
+
+    &:hover 
+      background: coral
+      cursor: pointer
+
+@media screen and ( min-width: 1440px )
+  .b
+
+    &--2
+      min-width: 202px

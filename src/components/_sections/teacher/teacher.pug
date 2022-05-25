@@ -1,0 +1,38 @@
+include ../../_ui/heading/h.pug 
+include ../../_ui/paragraph/p.pug 
+
+- 
+  var teacherList = [
+    { 
+      imgLink: 'assets/img/teacher/t-1.jpg', 
+      nameInner: 'Владимир Петров', 
+      descInner: 'Лишь непосредственные участники технического прогресса неоднозначны и будут в равной степени предоставлены сами себе.' 
+    }, 
+    { 
+      imgLink: 'assets/img/teacher/t-2.jpg', 
+      nameInner: 'Денис Сергеев', 
+      descInner: 'Безусловно, разбавленное изрядной долей эмпатии, рациональное мышление.' 
+    }, 
+    { 
+      imgLink: 'assets/img/teacher/t-3.jpg', 
+      nameInner: 'Михаил Андреев', 
+      descInner: 'Ясность нашей позиции очевидна: высокое качество позиционных исследований напрямую зависит от вывода.' 
+    }, 
+    { 
+      imgLink: 'assets/img/teacher/t-4.jpg', 
+      nameInner: 'Константин Дмитриев', 
+      descInner: 'Мы вынуждены отталкиваться от того, что существующая теория, в своём классическом представлении.' 
+    }, 
+  ];
+
+section(class="teacher")
+  div(class="container teacher__container")
+    div(class="layout teacher__layout")
+      +h( 2, 'teacher__h', 'Преподаватели курсов' )
+      ul(class="list-reset teacher__list")
+        each item in teacherList
+          li(class="teacher__item item-teacher")
+            div(class="item-teacher__img-wrap")
+              img(class="item-teacher__img" src=item.imgLink alt="Фотография преподавателя") 
+            +h( 3, 'item-teacher__h', item.nameInner ) 
+            +p( 'item-teacher__p', item.descInner ) 

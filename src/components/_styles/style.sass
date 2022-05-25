@@ -1,0 +1,68 @@
+@import '../_fonts/fonts.sass'
+  
+:root 
+  box-sizing: border-box
+  color: #666
+  color: var( --color-dark-text )
+  font: 400 16px/1.5 "Roboto", sans-serif
+  --color-royal: #3F2AFF
+  --color-dark-text: #666
+  --color-light-text: ##85859B
+  --color-dark-label: #333
+  --color-dark: #2E2B44
+  --color-mobile-menu-dark: #2F2C45
+  --color-light: #fff
+  --color-card-bg: #EDF0F9
+
+@import '../_ui/button/b.sass'
+@import '../_ui/heading/h.sass'
+@import '../_ui/label/l.sass'
+@import '../_ui/paragraph/p.sass'
+@import '../_ui/svg/svg.sass'
+
+*, ::before, ::after
+  box-sizing: inherit
+
+img
+  display: block
+  max-width: 100%
+
+.list-reset
+  margin: 0
+  padding: 0
+  list-style: none
+
+.btn-reset
+  border: none
+  border-radius: 0
+  padding: 0
+  background: none
+
+.container
+  max-width: 1440px
+  margin: auto
+  padding: 0 15px
+
+@media screen and ( min-width: 576px )
+  .container
+    padding: 0 33px
+
+@media screen and ( min-width: 768px )
+  .container
+    padding: 0 39px
+
+  .link 
+
+    &:hover 
+      color: coral
+
+@media screen and ( min-width: 1440px )
+  .container 
+    padding: 0 165px
+
+@import '../_sections/header/header.sass'
+@import '../_sections/hero/hero.sass'
+@import '../_sections/preference/preference.sass' 
+@import '../_sections/teacher/teacher.sass' 
+@import '../_sections/cource/cource.sass'
+@import '../_sections/footer/footer.sass'

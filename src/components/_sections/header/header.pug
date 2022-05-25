@@ -1,0 +1,24 @@
+include ../../_ui/svg/svg.pug 
+
+- 
+  var navList = [
+    {alink: '#', linkInner: 'Главная'}, 
+    {alink: '#', linkInner: 'О нас'}, 
+    {alink: '#', linkInner: 'Преподаватели'}, 
+    {alink: '#', linkInner: 'Курсы'}, 
+  ];
+
+header(class="header")
+  div(class="container header__container")
+    div(class="layout header__layout")
+      a(class="header__logo-link", href="index.html")
+        +svg('logo', 'header__logo-pic', '0 0 72 16')
+      button(class="btn-reset hamburger header__hamburger", id="nav-btn" , aria-expanded="false", aria-label="Открыть меню")
+        +svg('menu', 'hamburger__pic-open')
+        +svg('close', 'hamburger__pic-close')
+      nav(class="nav")
+        div(class="nav__wrap", id="nav-menu")
+          ul(class="list-reset nav__list")
+            each item in navList
+              li(class="nav__item")
+                a(class="link nav__link", href= item.alink)= item.linkInner

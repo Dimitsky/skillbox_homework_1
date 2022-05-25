@@ -1,4 +1,19 @@
 extends ..//_layouts/default.pug 
 block variables 
-  - var title = 'Курсы 3D моделирования';
-  - var charset = 'UTF-8';
+  - 
+    var title = 'Курсы 3D моделирования';
+    var charset = 'UTF-8';
+    var navList = [
+      {alink: '#', linkInner: 'Главная'}, 
+      {alink: '#', linkInner: 'О нас'}, 
+      {alink: '#', linkInner: 'Преподаватели'}, 
+      {alink: '#', linkInner: 'Курсы'}, 
+    ];
+
+block main 
+  include ../_sections/header/header.pug 
+  include ../_sections/hero/hero.pug 
+  include ../_sections/preference/preference.pug 
+  include ../_sections/teacher/teacher.pug 
+  include ../_sections/cource/cource.pug 
+  include ../_sections/footer/footer.pug 

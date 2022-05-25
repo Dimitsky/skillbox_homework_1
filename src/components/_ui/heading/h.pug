@@ -1,0 +1,17 @@
+//- h1, h2, h3, h4, h5, h6
+
+mixin h( size, mod, inner )
+  - var m = mod || '';
+  case size 
+    when 1
+      h1(class=`h h--1 ${m}`)=inner 
+    when 2
+      h2(class=`h h--2 ${m}`)=inner 
+    when 3
+      h3(class=`h h--3 ${m}`)=inner 
+    when 4
+      h4(class=`h h--4 ${m}`)=inner 
+    when 5 
+      h5(class=`h h--5 ${m}`)=inner 
+    when 6 
+      h6(class=`h h--6 ${m}`)=inner
